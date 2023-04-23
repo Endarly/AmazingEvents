@@ -1,0 +1,65 @@
+footer */
+.footer{
+    position: relative;
+}
+
+.footer_contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    place-items: center;
+    margin-bottom: 10px;
+}
+
+.footer_copy{
+    font-weight: 300;
+}
+
+.footer_picture{
+    margin: 2%;
+}
+
+.footer_img{
+    width: 70%;
+}
+.footer_social{
+    display: flex;
+    padding-top: 30px;
+    /* controlar el desbordamiento */
+    flex-wrap: wrap;
+
+}
+
+.footer_container{
+    /* border: 10px; */
+    padding: 15px;
+}
+
+.footer_link{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom left, #e969c7 40%, #ffc39ed1 100%);
+
+}
+
+.footer_icon{
+    width: 30px;
+}
+
+.footer_copyright{
+    padding-top: 10px;
+    border-top: 3px solid #c91c87;
+    text-align: center;
+    /* border: 2px solid rgb(255, 0, 217); */
+}
+
+.footer_copyright::after{
+    content: "endarl@gmail.com";
+}

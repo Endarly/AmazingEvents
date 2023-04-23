@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="Logos/favicon.png" type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/carrousel.css">
+  <link rel="stylesheet" href="css/data.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <title>Amzing Events</title>
+</head>
+
+<body>
+  <nav>
+    <div class="top-left">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logoaventegs" src="LogoAmazingEvents.png" alt="Logo Amazing Eents">
+        </a>
+      </div>
+    </div>
+
+    <div class="top-links">
+      <div class="container  borderYtoX">
+        <li><a class="navlink" id="home"> HOME</a></li>
+        <li><a class="navlink" id="upcomingEvents"> UPCOMING EVENTS</a></li>
+        <li><a class="navlink" id="pastEvents">PAST EVENTS</a></li>
+        <li><a class="navlink" id="contact">CONTACT</a></li>
+        <li><a class="navlink" id="stats">STATS</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="carousel" id="carrousel">
+    <div class="containerCarrousel">
+      <a class="arrow-after" id="after" href="#">&#10094;</a>
+      <h1 class="title nombrePage" id="name">HOME</h1>
+      <a class="arrow-next" id="next" href="#">&#10095;</a>
+    </div>
+  </section>
+
+  <div class="searchContainer" id="searchContainer">
+    <div id="checkcategories"></div>
+    <input type="text" id="inputSearch" placeholder="Busca tu evento preferido">
+  </div>
+
+  <main>
+    <div class="main">
+      <ul class="cards" id="todosLosEventos">
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer_container container">
+      <div class="footer_contact">
+        <div class="footer_texts">
+
+          <div class="footer_social">
+
+            <a href="https://www.instagram.com/" class="footer_link" target="_blank">
+              <img src="assets/bxl-instagram.svg" class="footer_icon" alt="Logo de instagram">
+            </a>
+
+            <a href="https://es-la.facebook.com" class="footer_link" target="_blank">
+              <img src="assets/bxl-meta.svg" class="footer_icon" alt="Logo de facebook">
+            </a>
+
+            <a href="https://twitter.com/EndarlyB" class="footer_link" target="_blank">
+              <img src="assets/bxl-twitter.svg" class="footer_icon" alt="Logo de twitter">
+            </a>
+
+            <a href="https://www.youtube.com/" class="footer_link" target="_blank">
+              <img src="assets/bxl-youtube.svg" class="footer_icon" alt="Logo de youtube">
+            </a>
+
+          </div>
+        </div>
+        <figure class="footer_picture">
+          <img src="assets/Sent messages _Isometric.svg" class="footer_img" alt="Logo de envío de mensajes">
+        </figure>
+      </div>
+      <p class="footer_copyright">Sitio web creado por &copy; Endarly Betancourt: </p>
+    </div>
+  </footer>
+
+
+
+  <script src="JS/amazingEvents.js"></script>
+  <script src="JS/index.js"></script>
+</body>
+
+</html>

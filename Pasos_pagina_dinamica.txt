@@ -1,0 +1,37 @@
+Paso 1 - NAVBAR Dinamico
+En el HTML Asignar a los botones (de navegacion) una misma clase y un ID diferente a cada uno
+
+PASO 2- document.getElementByClassName
+En JS, buscar los botones y guardarlos en una variable
+
+PASO 3 - Crear un Bucle For
+recorre la lista de botones, guardarndo los botones en una constante
+
+PASO 4 - agregando un evento clic 
+Va a guardar los ID que se obtienen al pulsar cada boton
+imprimir(e.target.id) -->funcion que debemos definir.
+
+PASO 5-  DEFINIR FUNCION IMPRIMIR(id)
+recibira como parametro un ID, resultante del recorrido del bucle for sobre los botones.
+Utilizar un switch, que va a evaluar como case, en que boton se hizo clic
+
+Case 1: Upcoming , llama a la funcion display con los [eventos futuros]
+Case 2: Past, llama a la funcion display con los [eventos pasados]
+Default, llama a la funcion display con todos los [eventos] (home)
+
+PASO 6- Crear la Funcion display(array)
+La funcion display recibira como parametro un array, y 
+ va a recorrer con un bucle for el array que recibe.
+
+A medida que recorre los eventos genera un template screen, con codigo html y JS
+de manera dinamica recorre el array y carga los datos dinamicos a medida que recorre el array
+
+con esta funcion display, se van a generar las tarjetas
+cuando finaliza de recorrer el array, se llama a
+
+document.getElementByID("id del contenedor donde colocamos las cartas").innerHTML=html;
+
+De esta manera se va a imprimir en la pantalla todos los card correspondientes dentro del contenedor
+
+Al finalizar fuera de la funcion display llamar a la funcion 
+imprimir("home") esto carga el home por defecto

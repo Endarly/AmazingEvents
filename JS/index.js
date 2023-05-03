@@ -2,6 +2,9 @@ let fechaBase = dataAmazing.fechaActual
 let eventos = dataAmazing.eventos
 var eventosPasados = []
 var eventosFuturos = []
+var stats = ""
+var contact = ""
+let textoHTML = document.getElementById("form")
 let ulNombreEventos = document.getElementById("eventos")
 let arrayAFiltrar = []
 var searchContainer = document.getElementById("searchContainer")
@@ -19,14 +22,14 @@ for (var i = 0; i < eventos.length; i++) {
     }
 }
 
+//Permite navegar entre las opciones
 var buttonNavegacion = []
 var buttonNav = document.getElementsByClassName("navlink")
-
-
 for (var i = 0; i < buttonNav.length; i++) {
     const element = buttonNav[i]
     buttonNavegacion.push(buttonNav[i].innerText)
     element.addEventListener("click", function (e) {
+        //setState("paginaANavegar", e.target.id)
         document.getElementById("name").innerHTML = e.target.innerText
         imprimir(e.target.id);
     })
@@ -39,9 +42,10 @@ function imprimir(id) {
             inputSearch.value = ""
             checkedCheckboxes = []
             searchContainer.style.display = "flex"
+            // stats.style.display ="none"
             displayCards(eventosFuturos)
-            changePage(1)
             eventsCategories(eventosFuturos)
+            textoHTML.innerHTML = ""
             break;
         case "pastEvents":
             arrayAFiltrar = eventosPasados
@@ -49,27 +53,26 @@ function imprimir(id) {
             inputSearch.value = ""
             checkedCheckboxes = []
             displayCards(eventosPasados)
-            changePage(2)
             eventsCategories(eventosPasados)
             break;
         case "contact":
-            changePage(3)
             imprimirFormulario()
-            // ulNombreEventos.innerHTML = ""
+            ulNombreEventos.innerHTML = ""
             searchContainer.style.display = "none"
             break;
         case "stats":
-            changePage(4)
             imprimirStats()
-            // textoHTML.innerHTML = texto
-            // ulNombreEventos.innerHTML = ""
+            texto = 'Estás en la página de Estadísticas'
+            textoHTML.innerHTML = texto
+            ulNombreEventos.innerHTML = ""
             searchContainer.style.display = "none"
             break;
         default:
+            // setState("paginaANavegar", "home")
+            //let InitAppStyle = document.getElementById("home")
             arrayAFiltrar = eventos
             searchContainer.style.display = "flex"
             displayCards(eventos)
-            changePage(0)
             eventsCategories(eventos)
             break;
     }
@@ -104,19 +107,49 @@ function displayCards(array) {
     document.getElementById("todosLosEventos").innerHTML = html;
 }
 
-//Toma el valor del location.search?TIME 
+//     // document.getElementById("todosLosEventos").innerHTML = html;
+// }
+
+// //Detalle
+// function detalle(id) {
+//     document.getElementById("todosLosEventos").innerHTML =
+//         `
+// <h1></h1>
+//  `
+// }
+
+//Toma el valor del location.search?TIME  Cuando me devuelvo del detalle
 var time = location.search.split("?time=")
 
 switch (time[1]) {
     case "pastEvents": imprimir("pastEvents")
+        textoHTML.innerHTML = ""
+        arrayAFiltrar = eventosPasados
+        inputSearch.value = ""
+        checkedCheckboxes = []
+        searchContainer.style.display = "flex"
+        changePage(2)
         break;
     case "upcomingEvents": imprimir("upcomingEvents")
+        arrayAFiltrar = eventosFuturos
+        inputSearch.value = ""
+        checkedCheckboxes = []
+        searchContainer.style.display = "flex"
+        changePage(1)
         break;
     case "contact": imprimir("contact")
+        imprimirFormulario()
+        textoHTML.innerHTML = ""
+        searchContainer.style.display = "none"
+        changePage(3)
         break;
     case "stats": imprimir("stats")
+        textoHTML.innerHTML = ""
+        searchContainer.style.display = "none"
+        changePage(4)
         break;
     default: imprimir("home")
+        changePage(0)
 }
 
 var buttonafter = document.getElementById("next")
@@ -141,26 +174,43 @@ buttonafter.addEventListener("click", function (e) {
 })
 
 
-
+//CARRUSEL
 function changePage(i) {
     switch (i) {
         case 0: displayCards(eventos)
             document.getElementById("name").innerHTML = buttonNavegacion[i]
+            textoHTML.innerHTML = ""
+            arrayAFiltrar = eventosPasados
+            inputSearch.value = ""
+            checkedCheckboxes = []
+            searchContainer.style.display = "flex"
             break;
         case 1: displayCards(eventosFuturos)
             document.getElementById("name").innerHTML = buttonNavegacion[i]
+            arrayAFiltrar = eventosFuturos
+            inputSearch.value = ""
+            checkedCheckboxes = []
+            searchContainer.style.display = "flex"
             break;
         case 2: displayCards(eventosPasados)
             document.getElementById("name").innerHTML = buttonNavegacion[i]
+            textoHTML.innerHTML = ""
+            arrayAFiltrar = eventosPasados
+            inputSearch.value = ""
+            checkedCheckboxes = []
+            searchContainer.style.display = "flex"
             break;
-        case 3: imprimirFormulario()
+        case 3: imprimirFormulario("contact")
             document.getElementById("name").innerHTML = buttonNavegacion[i]
+            textoHTML.innerHTML = ""
+            searchContainer.style.display = "none"
             break;
-        case 4: imprimirStats()
+        case 4: imprimirStats("stats")
             document.getElementById("name").innerHTML = buttonNavegacion[i]
+            textoHTML.innerHTML = ""
+            searchContainer.style.display = "none"
             break;
     }
-
 }
 
 function imprimirFormulario() {
@@ -203,9 +253,9 @@ function imprimirFormulario() {
 
 function imprimirStats() {
     document.getElementById("todosLosEventos").innerHTML =
-        `
-    <h1></h1>
-     `
+         `
+         <h1></h1>
+      `
 }
 
 inputSearch.addEventListener("keyup", function (evento) {
@@ -217,7 +267,6 @@ inputSearch.addEventListener("keyup", function (evento) {
 })
 
 //Creación dinámica de los checbox
-
 function eventsCategories(array) {
     let categories = array.map(evento => evento.category)
     let unica = new Set(categories)

@@ -1,5 +1,5 @@
-let fechaBase = dataAmazing.fechaActual
-let eventos = dataAmazing.eventos
+let fechaBase
+let eventos = []
 var eventosPasados = []
 var eventosFuturos = []
 var stats = ""
@@ -14,13 +14,27 @@ let checkedCheckboxes = []
 let search = ""
 
 
-for (var i = 0; i < eventos.length; i++) {
-    if (eventos[i].date > fechaBase) {
-        eventosFuturos.push(eventos[i])
-    } else {
-        eventosPasados.push(eventos[i])
+async function getData() {
+    let datosApi
+    await fetch("https://amd-amazingevents-api.onrender.com/api/eventos")
+        .then(response => response.json())
+        .then(json => datosApi = json)
+
+    eventos = datosApi.eventos
+    fechaBase = datosApi.fechaActual
+
+    for (var i = 0; i < eventos.length; i++) {
+        if (eventos[i].date > fechaBase) {
+            eventosFuturos.push(eventos[i])
+        } else {
+            eventosPasados.push(eventos[i])
+        }
     }
+
+    imprimir()
 }
+
+getData()
 
 //Permite navegar entre las opciones
 var buttonNavegacion = []
@@ -62,8 +76,6 @@ function imprimir(id) {
             break;
         case "stats":
             imprimirStats()
-            texto = 'Estás en la página de Estadísticas'
-            textoHTML.innerHTML = texto
             ulNombreEventos.innerHTML = ""
             searchContainer.style.display = "none"
             break;
@@ -91,7 +103,7 @@ function displayCards(array) {
         html += `
         <li class="cards_item">
       <div class="card">
-        <div class="card_image"><img src="Images/${array[i].image}"></div>
+        <img src="${array[i].image}" alt="${array[i].name}">
         <div class="card_content">
           <p class="card_title">${array[i].name}</p>
           <h6 class="card_text"> Price: ${array[i].price}</h6>
@@ -253,8 +265,8 @@ function imprimirFormulario() {
 
 function imprimirStats() {
     document.getElementById("todosLosEventos").innerHTML =
-         `
-         <h1></h1>
+        `
+         <h1>Estás en la página de estadísticas</h1>
       `
 }
 

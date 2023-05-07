@@ -35,9 +35,9 @@ h1 {
 }
 
 img {
-  height: auto;
-  max-width: 100%;
   vertical-align: middle;
+  width: 100%;
+  height: 100%;
 }
 
 .btn {
@@ -59,6 +59,8 @@ img {
 }
 
 .cards {
+  align-items: center;
+  justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -66,7 +68,14 @@ img {
   padding: 0;
 }
 .cards_detalle {
-  width: 500px;
+  border-radius: 0.25rem;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70);
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 80%;
 }
 
 .cards_item {
@@ -74,9 +83,6 @@ img {
   padding: 1rem;
 }
 
-img{
-  width: 100%;
-}
 @media (min-width: 40rem) {
   .cards_item {
     width: 50%;
@@ -97,11 +103,39 @@ img{
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70);
+  justify-content: space-evenly;
+  align-items: center;
+  width: 280px;
+  height: 320px;
 }
+.card_image {
+  height: 100%;
+  width: 100%;
+}
+
+.cardDetalle {
+  background-color: white;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70);
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 
 .card_content {
   height: 100%;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
   background: linear-gradient(to bottom left, #e969c7 40%, #ffc39ed1 100%);
 }
 

@@ -1,0 +1,49 @@
+#stats{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    width: 90%;
+    height: auto;
+    background-color:rgba(126, 100, 100, 0.137);
+    margin-bottom: 35px;
+}
+
+.color{
+    color: black;
+    text-align: center;
+    background: linear-gradient(to right bottom, #009dff8f, #ec2f4b94);
+}
+
+.color th{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+td{
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    border: 3px solid transparent;
+}
+
+th{
+    font-size: 18px;
+    text-align: center;
+    padding: 0px 10px;
+    border: 3px solid transparent;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.titulo th{
+    font-weight: bolder;
+    color: black;
+    background-color: rgb(155, 152, 152);
+}

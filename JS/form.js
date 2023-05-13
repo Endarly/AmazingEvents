@@ -1,17 +1,15 @@
-function actionForm(event){
-    event.preventDefault()
+function actionForm(event) {
+  event.preventDefault()
 
- let formData = {
+  let formData = {
     email: event.target[0].value,
     typeComment: event.target[1].value,
     date: event.target[2].value,
     comment: event.target[3].value
- } 
+  }
 
+  modalComentario.innerHTML = `
 
- modalComentario.innerHTML = `
-
- 
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
      <div class="modal-dialog">
        <div class="modal-content">
@@ -28,14 +26,12 @@ function actionForm(event){
        </div>
      </div>
    </div>
- 
  `
- let botonModal = document.getElementById("botonModal")
- botonModal.addEventListener("click", function(){backHome()})
-
+  let botonModal = document.getElementById("botonModal")
+  botonModal.addEventListener("click", function () { backHome() })
 }
 
-function backHome(){   
+function backHome() {
   setState("paginaANavegar", "home")
   imprimir()
 }

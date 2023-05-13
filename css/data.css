@@ -253,9 +253,9 @@ textarea{
   font-size: 16px;
   padding: 1.6rem 0;
 
-}
+}*/
 
-.inputform{
+/* .inputform{
   margin-left: 3rem;
   background-color: transparent;
   border: none;
@@ -266,7 +266,7 @@ textarea{
   width: 80%;
   padding-top: 20px;
   font-size: 16px;
-}
+} */
 
 .btn-block {
   width: 200px;
@@ -302,4 +302,4 @@ textarea{
 .ceroResult{
   font-size: 40px;
   color:red;
-} */
+} 

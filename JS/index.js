@@ -55,12 +55,12 @@ async function getData() {
 getData()
 
 //Permite navegar entre las opciones
-//var buttonNavegacion = []
 var buttonNav = document.getElementsByClassName("navlink")
 for (var i = 0; i < buttonNav.length; i++) {
     const element = buttonNav[i]
     buttonNavegacion.push(buttonNav[i].innerText)
     element.addEventListener("click", function (e) {
+        setState("paginaANavegar", e.target.id)
         document.getElementById("name").innerHTML = e.target.innerText
         imprimir(e.target.id);
     })
@@ -106,9 +106,7 @@ function imprimir(id) {
             stats.style.display = "flex"
             break;
         default:
-            //setState("paginaANavegar", "home")
-            //let InitAppStyle = document.getElementById("home")
-            // InitAppStyle.disabled = true
+            setState("paginaANavegar","home")
             ulNombreEventos.style.display = "flex"
             inputSearch.value = ""
             checkedCheckboxes = []
@@ -122,8 +120,6 @@ function imprimir(id) {
             break;
     }
 }
-
-
 
 //me imprime todas las tarjetas dependiendo de donde esté ubicado
 function displayCards(array) {
@@ -152,22 +148,7 @@ function displayCards(array) {
     }
 
     document.getElementById("todosLosEventos").innerHTML = html;
-    //ulNombreEventos.innerHTML = html
 }
-
-//     // document.getElementById("todosLosEventos").innerHTML = html;
-// }
-
-// //Detalle
-// function detalle(id) {
-//     document.getElementById("todosLosEventos").innerHTML =
-//         `
-// <h1></h1>
-//  `
-// }
-
-
-
 
 //Carrusel
 var buttonafter = document.getElementById("next")
@@ -243,9 +224,10 @@ function imprimirFormulario() {
             <textarea id="comentario" placeholder="Dejanos tu comentario"></textarea>
         </div>
 
-        <div class="boton_form">
-            <input  class="boton_submit"  type="submit" value="Enviar!!!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        </div>
+           <div class="btn-block">
+            <button class="btn" type="submit"><i class="fas fa-paper-plane"></i>Submit</button>
+
+          </div>
     </form>
 
     `
@@ -253,66 +235,6 @@ function imprimirFormulario() {
     form.addEventListener("submit", function (event) { actionForm(event) })
 }
 
-
-
-// formulario anterior 
-//<div class="form">
-//         <form method="POST" action="">
-//           <div class="input-field">
-//             <i class="fas fa-user"></i>
-//             <label for="nombre">Name</label>
-//             <input class="inputform" type="text" name="nombre" maxlength="50" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]{3,23}" title="Debe indicar su nombre correctamente" required>
-//           </div>
-
-//           <div class="input-field">
-//             <i class="fas fa-mobile-alt"></i>
-//             <label for="telefono">Cell Phone</label>
-//             <input class="inputform" type="telf" name="telefono" maxlength="9" pattern="^[6789]\d{8}$" title="Debe indicar un telefono válido" required>
-//           </div>
-
-//           <div class="input-field">
-//             <i class="fas fa-at"></i>
-//             <label for="email">Email</label>
-//             <input class="inputform" type="email" name="email" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Debe indicar un correo válido" required>
-//           </div>
-
-//           <div class="form_input">
-//                 <label for="type"><i class="fa-solid fa-qrcode"></i></label>
-//                 <select id="type" name="type" >
-//                     <option value="Varios" selected>Varios</option>
-//                     <option value="Reclamo">Reclamo</option>
-//                     <option value="Sugerencia">Sugerencia</option>
-//                     <option value="Felicitaciones">Felicitaciones</option>
-//                 </select>
-//             </div>
-
-//             <div class="form_input">
-//                 <label for="date"><i class="fa-solid fa-calendar"></i></i></label>
-//                 <input type="date"id="date">
-//             </div>
-
-//           <div class="input-field">
-//             <i class="fas fa-pen"></i>
-//             <label for="comentario">Mesagge</label>
-//             <textarea name="comentario"  placeholder="Déjanos tu comentario" rows="10" length="140" required></textarea>
-//           </div>
-
-//           <div class="btn-block">
-//             <button class="btn" type="submit"><i class="fas fa-paper-plane"></i>Submit</button>
-
-//           </div>
-
-//         </form>
-//       </div>
-
-
-
-// function imprimirStats() {
-//     document.getElementById("todosLosEventos").innerHTML =
-//         `
-//          <h1>Estás en la página de estadísticas</h1>
-//       `
-// }
 
 inputSearch.addEventListener("keyup", function (evento) {
     var datoInput = evento.target.value

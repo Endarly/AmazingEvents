@@ -27,6 +27,7 @@ form{
     height: 120px;
     border-radius: 2px; 
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 .form_input label {

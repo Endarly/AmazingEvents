@@ -200,8 +200,9 @@ function changePage(i) {
 
 function imprimirFormulario() {
     document.getElementById("todosLosEventos").innerHTML =
-        `
+        `<div class="card_contact">
         <form action="">
+        <div class="login-box">
         <div class="form_input">
             <label for="email"><i class="fa-solid fa-user"></i></label>
             <input type="email" name="email" placeholder="email@email.com" required>
@@ -224,17 +225,17 @@ function imprimirFormulario() {
             <textarea id="comentario" placeholder="Dejanos tu comentario"></textarea>
         </div>
 
-           <div class="btn-block">
-            <button class="btn" type="submit"><i class="fas fa-paper-plane"></i>Submit</button>
+        <div class="btn-block">
+        <button class="btn" type="submit"><i class="fas fa-paper-plane"></i>Submit</button>
 
-          </div>
+      </div>
     </form>
+    </div>
 
     `
     let form = document.querySelector("form")
     form.addEventListener("submit", function (event) { actionForm(event) })
 }
-
 
 inputSearch.addEventListener("keyup", function (evento) {
     var datoInput = evento.target.value

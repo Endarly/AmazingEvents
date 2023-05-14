@@ -36,16 +36,13 @@ form{
 }
 
 .boton_submit{
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 50px;
     font-size: 20px;
     background-color: rgba(226, 68, 176, 0.663);
-
 }
 .boton_form{
-    width: 400px;
-    height: 60px;
-    margin-top: 10px;
-    border-radius: 10px;
+    margin-top: 15px;
     overflow: hidden;
+    display: block;
 }

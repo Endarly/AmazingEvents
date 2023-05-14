@@ -42,20 +42,21 @@ img {
 
 .btn {
   color: #ffffff;
-  padding: 0.8rem;
+  padding: 1rem;
   font-size: 14px;
   text-transform: uppercase;
   border-radius: 4px;
-  font-weight: 400;
+  font-weight: 450;
   display: block;
   width: 100%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  border: 1px solid rgba(7, 7, 7, 0.2);
+  box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70);
+  /* background: transparent; */
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.231);
 }
 
 .cards {
@@ -108,6 +109,20 @@ img {
   width: 280px;
   height: 320px;
 }
+
+.card_contact {
+  width: 450px;
+  height: 500px;
+  background-color: rgb(15, 14, 14);
+  border-radius: 0.90rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(to bottom left, #e969c7 40%, #ffc39ed1 100%);
+  box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70);
+  justify-content:center;
+}
+
 .card_image {
   height: 100%;
   width: 100%;
@@ -177,7 +192,7 @@ img {
   width: 40%;
   height: 40px;
   margin: 10px;
-  background: rgba(213, 91, 172, 0.452);
+  background: rgba(213, 91, 172, 0.134);
   font-size: 10pt;
   color: #040404;
   margin-left: 20%;
@@ -199,79 +214,20 @@ img {
 }
 
 .checkbox{
-  /* position: relative; */
   width: 650px;
   padding-left: 100px;
-  /* background-color: #e969c7; */
-  /* border: 1px solid greenyellow; */
 }
 
 input[type="checkbox" i] {
   margin: 3px 3px 3px 10px;
 }
 
-
-/* FORMULARIO */
-
- /* div.form {
-  width: 100%;
-  max-width: 450px;
-  max-height: 500px;
-  border: 2px solid #0e0e0e;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-}
-.input-field {
-  position: relative;
-}
-.input-field i {
-  color: #000000;
-  margin: 0px 1rem;
-  font-size: 25px;
-  width: 20px;
-  top: -5px;
-  position: relative;
-}
-.input-field i.fa-pen {
-  top: -30px;
-  position: relative;
-}
-.input-field:active {color: #8FC924;}
-
-textarea{
-  margin-left: 3rem;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #0e0e0e;
-  height: 3rem;
-  margin: 12 0 15px 0;
-  transition: all .3s;
-  width: 85%;
-  padding-top: 20px;
-  font-size: 16px;
-  padding: 1.6rem 0;
-
-}*/
-
-/* .inputform{
-  margin-left: 3rem;
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #0e0e0e;
-  height: 3rem;
-  margin: 12 0 15px 0;
-  transition: all .3s;
-  width: 80%;
-  padding-top: 20px;
-  font-size: 16px;
-} */
-
 .btn-block {
   width: 200px;
   margin: 0 auto;
   text-align: center;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+
 }
 .btn-block .btn {
   text-decoration: none;
@@ -303,3 +259,12 @@ textarea{
   font-size: 40px;
   color:red;
 } 
+
+.login-box {
+  left: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+
+

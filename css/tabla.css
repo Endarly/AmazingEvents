@@ -10,18 +10,25 @@ table{
     width: 90%;
     height: auto;
     background-color:rgba(126, 100, 100, 0.137);
+    border-radius: 10px;
     margin-bottom: 35px;
+    
 }
 
 .color{
     color: black;
     text-align: center;
     background: linear-gradient(to right bottom, #009dff8f, #ec2f4b94);
+    border-radius: 10px;
 }
 
 .color th{
     font-size: 25px;
     font-weight: bolder;
+    background: linear-gradient(to bottom left, #e969c7 40%, #ffc39ed1 100%);
+    box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70);
+    border-radius: 10px;
+
 }
 
 td{
@@ -29,6 +36,7 @@ td{
     text-align: center;
     font-weight: bold;
     border: 3px solid transparent;
+    border-radius: 10px;
 }
 
 th{
@@ -40,10 +48,13 @@ th{
 
 .titulo{
     text-align: center;
+    border-radius: 10px;
+    background-color: rgba(155, 152, 152, 0.037);
 }
 
 .titulo th{
     font-weight: bolder;
     color: black;
     background-color: rgb(155, 152, 152);
+    border-radius: 10px;
 }

@@ -42,4 +42,7 @@
     padding-top: 10px;
     font-size: 5rem;
     color: white;
+    font-style:unset;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
   }

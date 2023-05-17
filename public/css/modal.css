@@ -1,0 +1,78 @@
+#myBtn {
+    background-color: #e76fa9b9;
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 10px #666;
+  }
+  #myBtn:hover {
+    background-color: #cc3b99;
+  }
+  #myBtn:active {
+    box-shadow: 0 4px #555;
+    transform: translateY(4px);
+  }
+  #confirm {
+    background: linear-gradient(to bottom left, #e969c7 40%, #ffc39ed1 100%);
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #0e0e0e;
+    border-radius: 5px;
+  }
+  #confirm:hover, #confirm:active {
+    background-color: #0e0e0e;
+  }
+  .modal {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .content {
+    position: relative;
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    background-color: #fff;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  }
+  .header {
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+    padding: 13px 16px;
+  }
+  .footer {
+    padding: 13px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+  }
+  .body {
+    padding: 13px 16px;
+    height: 100px;
+  }
+  #close {
+    float: right;
+    font-weight: bold;
+    color: #333;
+  }
+  #close:hover {
+    cursor: pointer;
+  }
+  @keyframes animatetop {
+    from {top:-100px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  

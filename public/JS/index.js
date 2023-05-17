@@ -125,7 +125,7 @@ function displayCards(array) {
     if (location.pathname == "/pages/detalle.html") {
         url = "../detalle.html"
     } else {
-        url = "../pages/detalle.html"
+        url = "pages/detalle.html"
     }
     var html = "";
     for (var i = 0; i < array.length; i++) {
@@ -222,11 +222,9 @@ function imprimirFormulario() {
             <label for="comentario"><i class="fa-solid fa-comment"></i></label>
             <textarea id="comentario" placeholder="Dejanos tu comentario"></textarea>
         </div>
-
         <div class="btn-block">
-        <button class="btn" type="submit"><i class="fas fa-paper-plane"></i>Submit</button>
-
-      </div>
+        <button id="myBtn" class="press" type="submit"> Submit </button>
+        </div>
     </form>
     </div>
 

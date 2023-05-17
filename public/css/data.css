@@ -223,30 +223,10 @@ input[type="checkbox" i] {
 }
 
 .btn-block {
-  width: 200px;
+  padding: 10px;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
 
-}
-.btn-block .btn {
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(to bottom left, #e969c7 40%, #ffc39ed1 100%);
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
-  border: none;
-  padding: 10px 35px;
-  font-size: 19px;
-  margin-top: 1em;
-  margin-bottom: 1em; 
-}
-.btn-block .btn i {
-  float: right; 
-  padding-left: 10px; 
-  font-size: 16px; 
-  padding-top: 3px;
 }
 @media (max-width: 400px) {
   div.form {width: 90%; padding: 20px 10px;}

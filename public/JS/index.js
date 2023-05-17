@@ -33,7 +33,6 @@ async function getData() {
 
     //Toma el valor del location.search?TIME  Cuando me devuelvo del detalle
     var time = location.search.split("?time=")
-    console.log('1ero de todo VAR========>', time[1])
     switch (time[1]) {
         case "pastEvents":
             changePage(2)
@@ -114,7 +113,6 @@ function imprimir(id) {
             searchContainer.style.display = "flex"
             formulario.style.display = "none"
             stats.style.display = "none"
-            console.log('PREVIO AL PASO 4to paso ===> ', eventos)
             displayCards(eventos)
             eventsCategories(eventos)
             break;
@@ -127,7 +125,7 @@ function displayCards(array) {
     if (location.pathname == "/pages/detalle.html") {
         url = "../detalle.html"
     } else {
-        url = "../pages/detalle.html"
+        url = "../public/pages/detalle.html"
     }
     var html = "";
     for (var i = 0; i < array.length; i++) {

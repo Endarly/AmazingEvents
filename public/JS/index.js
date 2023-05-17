@@ -125,7 +125,7 @@ function displayCards(array) {
     if (location.pathname == "/pages/detalle.html") {
         url = "../detalle.html"
     } else {
-        url = "../public/pages/detalle.html"
+        url = "../pages/detalle.html"
     }
     var html = "";
     for (var i = 0; i < array.length; i++) {

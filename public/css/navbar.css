@@ -47,7 +47,7 @@ nav{
     width: 100%;
 }
 
-div.container
+ul.container
 {
     font-family: Raleway;
     margin: 0 auto;
@@ -55,7 +55,7 @@ div.container
 	text-align: center;
 }
 
-div.container a
+ul.container a
 {
     color: #f43692;
     text-decoration: none;
@@ -70,7 +70,7 @@ div.container a
 }
 
 
-div.borderYtoX a:before, div.borderYtoX a:after
+ul.borderYtoX a:before, ul.borderYtoX a:after
 {
     position: absolute;
     opacity: 0.5;
@@ -81,19 +81,19 @@ div.borderYtoX a:before, div.borderYtoX a:after
     transition: all 0.3s;
 }
 
-div.borderYtoX a:before
+ul.borderYtoX a:before
 {
     left: 0px;
     top: 0px;
 }
 
-div.borderYtoX a:after
+ul.borderYtoX a:after
 {
     right: 0px;
     bottom: 0px;
 }
 
-div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
+ul.borderYtoX a:hover:before, ul.borderYtoX a:hover:after
 {
     opacity: 1;
     height: 2px;

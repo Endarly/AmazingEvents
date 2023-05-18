@@ -130,15 +130,15 @@ async function imprimirStats() {
 
     tablaFuturos.innerHTML =
         `<tr class="color">
-    <th colspan="3">Estadisticas de Eventos Futuros por Categoría</th>
-  </tr>
-  <tr class="titulo">
-    <th>Categorías</th>
-    <th>Estimación de Ingresos</th>
-    <th>Asistencia Estimada</th>
-  </tr>`
+         <th colspan="3">Estadisticas de Eventos Futuros por Categoría</th>
+         </tr>
+         <tr class="titulo">
+         <th>Categorías</th>
+         <th>Estimación de Ingresos</th>
+         <th>Asistencia Estimada</th>
+         </tr>`
     ordenarFuturos = []
-
+    
     ordenarFuturos.push(...ingresoYassitencia.sort((a, b) => {
         return b.estimacionIngresos - a.estimacionIngresos
     }))
@@ -164,14 +164,14 @@ async function imprimirStats() {
     let ordenarPasados = []
 
     tablaPasados.innerHTML =
-        `<tr class="color">
-    <th colspan="3">Estadisticas de Eventos Pasados por Categoría</th>
-  </tr>
-  <tr class="titulo">
-    <th>Categorías</th>
-    <th>Ingresos</th>
-    <th>Asistencia</th>
-  </tr>`
+    `<tr class="color">
+        <th colspan="3">Estadisticas de Eventos Pasados por Categoría</th>
+        </tr>
+        <tr class="titulo">
+        <th>Categorías</th>
+        <th>Ingresos</th>
+        <th>Asistencia</th>
+        </tr>`
     ordenarPasados.push(...ingresoYassitencia.sort((a, b) => {
         return b.ingresos - a.ingresos
     }))

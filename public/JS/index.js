@@ -77,6 +77,7 @@ function imprimir(id) {
             eventsCategories(eventosFuturos)
             formulario.style.display = "none"
             stats.style.display = "none"
+            window.history.replaceState(null, null, window.location.origin+"/index.html?time=upcomingEvents")
             break;
         case "pastEvents":
             arrayAFiltrar = eventosPasados
@@ -88,6 +89,7 @@ function imprimir(id) {
             eventsCategories(eventosPasados)
             formulario.style.display = "none"
             stats.style.display = "none"
+            window.history.replaceState(null, null, window.location.origin+"/index.html?time=pastEvents")
             break;
         case "contact":
             imprimirFormulario()
@@ -95,6 +97,7 @@ function imprimir(id) {
             searchContainer.style.display = "none"
             formulario.style.display = "flex"
             stats.style.display = "none"
+            window.history.replaceState(null, null, window.location.origin+"/index.html?time=contact")
             break;
         case "estadistica":
             imprimirStats()
@@ -103,6 +106,7 @@ function imprimir(id) {
             searchContainer.style.display = "none"
             formulario.style.display = "none"
             stats.style.display = "flex"
+            window.history.replaceState(null, null, window.location.origin+"/index.html?time=estadistica")
             break;
         default:
             setState("paginaANavegar","home")
@@ -115,6 +119,7 @@ function imprimir(id) {
             stats.style.display = "none"
             displayCards(eventos)
             eventsCategories(eventos)
+            window.history.replaceState(null, null, window.location.origin + "/index.html?time=home");
             break;
     }
 }
@@ -193,6 +198,7 @@ function changePage(i) {
         default:
             document.getElementById("name").innerHTML = buttonNavegacion[i]
             imprimir("home")
+            break;
     }
 }
 
@@ -289,8 +295,8 @@ function filtrosCombinados() {
     else {
         filtrado = arrayAFiltrar
     }
-    filtrado.length > 0 ?
-        displayCards(filtrado) :
-        document.getElementById("todosLosEventos").innerHTML=""
-        ulNombreEventos.innerHTML = `<h1 class="ceroResult" >No se encontraron eventos para tu búsqueda </h1>`
+    filtrado.length > 0 ? 
+    displayCards(filtrado) :
+    document.getElementById("todosLosEventos").innerHTML=""
+    ulNombreEventos.innerHTML = `<h1 class="ceroResult" >No se encontraron eventos para tu búsqueda </h1>`
 }

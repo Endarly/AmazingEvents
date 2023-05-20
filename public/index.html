@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="css/tabla.css">
   <link rel="stylesheet" href="css/contacto.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/cardsNuevas.css">
   <title>Amzing Events</title>
 </head>
 
@@ -62,35 +63,36 @@
   </div>
 
   <main>
-    <div class="main">
-      <ul class="cards" id="todosLosEventos">
-      </ul>
+    <div id="cards_landscape_wrap-2">
+      <ul class="cards" id="todosLosEventos"></ul>
+      <div class="row"></div>
     </div>
+
+    <div id="form"></div>
+
+    <div id="eventos"></div>
+
+    <!-- Estadísticas -->
+
+    <div id="stats">
+      <table>
+        <tr class="color">
+          <th colspan="3">Estadísticas de Eventos</th>
+        </tr>
+        <tr class="titulo" id="mayoresymenores">
+          <th>Evento con Mayor Porcentaje de Asistencia</th>
+          <th>Evento con Menor Porcentaje de Asistencia</th>
+          <th>Evento de Mayor Capacidad</th>
+        </tr>
+      </table>
+
+      <table id="statsFuturos"></table>
+      <table id="statsPasados"></table>
+    </div>
+
+    <div id="modalComentario"></div>
+
   </main>
-
-  <div id="form"></div>
-
-  <div id="eventos"></div>
-
-  <!-- Estadísticas -->
-
-  <div id="stats">
-    <table>
-      <tr class="color">
-        <th colspan="3">Estadísticas de Eventos</th>
-      </tr>
-      <tr class="titulo" id="mayoresymenores">
-        <th>Evento con Mayor Porcentaje de Asistencia</th>
-        <th>Evento con Menor Porcentaje de Asistencia</th>
-        <th>Evento de Mayor Capacidad</th>
-      </tr>
-    </table>
-    
-    <table id="statsFuturos"></table>
-    <table id="statsPasados"></table>
-  </div>
-
-  <div id="modalComentario"></div>
 
 
   <footer class="footer">

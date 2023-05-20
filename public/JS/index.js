@@ -128,23 +128,33 @@ function imprimir(id) {
 function displayCards(array) {
     var url
     if (location.pathname == "/pages/detalle.html") {
-        url = "../detalle.html"
+        url = "detalle.html"
     } else {
         url = "pages/detalle.html"
     }
     var html = "";
     for (var i = 0; i < array.length; i++) {
         html += `
-        <li class="cards_item">
-      <div class="card">
-        <img src="${array[i].image}" alt="${array[i].name}">
-        <div class="card_content">
-          <p class="card_title">${array[i].name}</p>
-          <h6 class="card_text"> Price: ${array[i].price}</h6>
-          <a href="${url}?id=${array[i].id}"><button class="btn card_btn">Read More</button></a>
-        </div>
-      </div>
-    </li>
+        <div class="cards_item">
+        <a href="">
+            <div class="card-flyer">
+                <div class="text-box">
+                <div class="card">
+                    <div class="image-box">
+                        <img src="${array[i].image}" alt="${array[i].name}" />
+                    </div>
+                    <div class="text-container">
+                        <p class="card_title">${array[i].name}</p>
+                        <h6 class="card_text"> Price: ${array[i].price}</h6>
+                        <div class="btn-block_submit">
+                        <a href="${url}?id=${array[i].id}"><button id="myBtn" class="btn-block_submit press">Read More</button></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </a>
+    </div>
     `
         var text = `Este es el id => ${array[i].id}`
         console.log(text)

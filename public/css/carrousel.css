@@ -10,7 +10,7 @@
   .containerCarrousel a {
     position: absolute;
     text-decoration: none;
-    color: white;
+    color:black;
     font-size: 40px;
     top: 50%;
     transform: translatey(-50%);
@@ -41,7 +41,7 @@
   .title{
     padding-top: 10px;
     font-size: 5rem;
-    color: white;
+    color: black;
     font-style:unset;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 

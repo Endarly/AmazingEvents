@@ -1,15 +1,17 @@
 #myBtn {
-    background-color: #e76fa9b9;
+    background-color: #fffefe;
     width: 200px;
     height: 40px;
-    color: #fff;
+    /* color: #fff; */
     font-size: 16px;
     font-weight: bold;
     border-radius: 20px;
     box-shadow: 0 10px #666;
+    justify-content: center;
+    align-items: center;
   }
   #myBtn:hover {
-    background-color: #cc3b99;
+    background: linear-gradient(to bottom left, #e969c7 40%, #ffc39ed1 100%);
   }
   #myBtn:active {
     box-shadow: 0 4px #555;

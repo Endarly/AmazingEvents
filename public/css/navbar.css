@@ -55,11 +55,38 @@ ul.container
 	text-align: center;
 }
 
+/* 
+div.top-links{
+    border: 5px solid red;
+    height: 18vh;
+    max-width: 2560px;
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    ul.container {
+     max-width: 740px;
+   }
+
+   div.top-links{
+    border: 5px solid red;
+    height: 5vh;
+    max-width: 160px;
+   }
+
+}
+
+@media screen and (max-width: 425px) {
+    ul.container {
+      max-width: 370px;
+    }
+
+} */
+
 ul.container a
 {
     color: #f43692;
     text-decoration: none;
-    font: 18px Raleway;
+    font: 19px Raleway;
     margin: 0px 10px;
     padding: 10px 15px;
     position: relative;

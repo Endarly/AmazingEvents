@@ -213,7 +213,7 @@ img {
 
 .detallecards{
   width: 100%;
-  padding-top: 20px;
+  padding: 100px;
   align-items: center;
   display: flex;
 }

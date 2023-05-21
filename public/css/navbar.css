@@ -13,6 +13,9 @@ nav{
     padding: 10px 0px;
     height: 60px;
     vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top-left {
@@ -54,6 +57,33 @@ ul.container
     padding-top: 1em;
 	text-align: center;
 }
+
+nav .container{
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    color: #9b59b6;
+    width: 200px;
+    height: 500px;
+    text-align: center;  
+    border-radius: 20px;
+    transition:  background-color .3s ease-in-out;
+}
+
+@media (min-width: 766px){
+    nav .container
+    {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+        background-color: transparent;
+        position: static;
+        transform: translateX(0%);
+    }
+}
+
 
 /* 
 div.top-links{
@@ -126,3 +156,84 @@ ul.borderYtoX a:hover:before, ul.borderYtoX a:hover:after
     height: 2px;
     width: 100%;
 }
+
+/* NUEVO */
+/* nav .nav-items a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    color: #9b59b6;
+    width: 100px;
+    text-align: center;  
+    border-radius: 20px;
+    transition:  background-color .3s ease-in-out;
+  }
+  
+  nav .nav-items a.active {
+    font-weight: bold;
+  }
+  
+  nav .nav-items a:hover {
+    background-color: #8e44ad;
+    color: #fff;
+  } */
+  
+  .hamburger {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .hamburger .hamb-line {
+    width: 22px;
+    background-color: #880757;
+    height: 2px;
+    margin: 4px;
+  }
+  
+  .content{
+    background-color: #fff;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+      font: 8px Raleway;
+    }
+    .nav-items {
+      position: absolute;
+      left: -280px;
+      top: 0;
+      transition: 0.3s ease-in;
+      width: 280px;
+      background-color: #000000;
+      height: 100vh;
+      z-index: 2;
+    }
+  
+    .nav-items.display {
+      left: 0;
+    }
+  
+    nav .nav-items a {    
+      padding: 30px 0;
+      display: block;    
+      width: 100%;
+      margin: 0;
+      border-radius: 0;    
+    }
+
+    .title {
+        font-size: 0.2rem;
+    }
+
+    .logoaventegs{
+        width: 150%;
+    }
+  }
+  

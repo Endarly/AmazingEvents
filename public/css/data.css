@@ -242,7 +242,7 @@ input[type="checkbox" i] {
   align-items: center;
 
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 768px) {
   div.form {width: 90%; padding: 20px 10px;}
   input, textarea {width: 83%;}
   .input-field i {margin: 0px 1rem 0px 0.6rem;}

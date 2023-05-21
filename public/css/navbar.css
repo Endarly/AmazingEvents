@@ -228,11 +228,7 @@ ul.borderYtoX a:hover:before, ul.borderYtoX a:hover:after
       border-radius: 0;    
     }
 
-    .title {
-        font-size: 0.2rem;
-    }
-
-    .logoaventegs{
+   .logoaventegs{
         width: 150%;
     }
   }

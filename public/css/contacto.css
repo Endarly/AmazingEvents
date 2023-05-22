@@ -6,14 +6,16 @@
 
 form{
     height: 80vh;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+#form{
+    display: none;
+}
 
 .form_input{
-    padding-top: 20px;
+    padding-top: 20px;s
     display: flex;
 }
 

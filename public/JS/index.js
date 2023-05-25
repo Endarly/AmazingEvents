@@ -101,7 +101,7 @@ function imprimir(id) {
             break;
         case "estadistica":
             imprimirStats()
-            document.getElementById("todosLosEventos").innerHTML = ""
+            document.getElementById("allEvents").innerHTML = ""
             ulNombreEventos.style.display = "none"
             searchContainer.style.display = "none"
             formulario.style.display = "none"
@@ -160,7 +160,7 @@ function displayCards(array) {
         console.log(text)
     }
 
-    document.getElementById("todosLosEventos").innerHTML = html;
+    document.getElementById("allEvents").innerHTML = html;
 }
 
 //Carrusel
@@ -213,7 +213,7 @@ function changePage(i) {
 }
 
 function imprimirFormulario() {
-    document.getElementById("todosLosEventos").innerHTML =
+    document.getElementById("allEvents").innerHTML =
         `<div class="card_contact">
         <form action="">
         <div class="login-box">
@@ -307,6 +307,6 @@ function filtrosCombinados() {
     }
     filtrado.length > 0 ? 
     displayCards(filtrado) :
-    document.getElementById("todosLosEventos").innerHTML=""
+    document.getElementById("allEvents").innerHTML=""
     ulNombreEventos.innerHTML = `<h1 class="ceroResult" >No se encontraron eventos para tu búsqueda </h1>`
 }

@@ -17,7 +17,7 @@ body {
   font-weight: 400;
   letter-spacing: 0;
   padding: 1rem;
-  background: #050505e6;
+  background: #ffffffe6;
 }
 a{
   text-decoration: none;
@@ -184,7 +184,7 @@ img {
 
 /* Search */
 .searchContainer{
-  color: white;
+  color: rgb(12, 12, 12);
   width: 100%;
   height: 100px;
   display: flex;
@@ -195,8 +195,8 @@ img {
 }
 
 #inputSearch{
-  width: 40%;
-  height: 40px;
+  /* width: 40%;
+  height: 40px; */
   margin: 10px;
   font-size: 10pt;
   color: #040404;
@@ -240,8 +240,34 @@ input[type="checkbox" i] {
   /* max-width: 160px; */
   justify-content: center;
   align-items: center;
-
 }
+
+main .check-container .checkbox-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .check-container .checkbox-search .container_slider {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  white-space: nowrap;
+  padding-bottom: 0.6rem;
+}
+
+.container-events{
+  display: flex;
+}
+
+#input-search {
+  width: 120px;
+  gap: 0.4rem;
+  color: #fdfdfd;
+}
+
 @media screen and (max-width: 768px) {
   div.form {width: 90%; padding: 20px 10px;}
   input, textarea {width: 83%;}
@@ -266,5 +292,26 @@ input[type="checkbox" i] {
 }
 
 td {
-  color: white;
+  color: rgb(0, 0, 0);
+}
+
+@media (min-width: 990px){
+  main .check-container {
+    margin-top: 6rem;
+    display: flex;
+  }
+main .check-container .checkbox-search {
+  display:grid;
+  width: 100%;
+  flex-direction: row;
+  gap: 1.5rem;
+  }
+}
+
+@media (min-width: 766px){
+main .input-search {
+    width: 60%;
+    gap: 0.4rem;
+    color: #fdfdfd;
+}
 }
